@@ -6,7 +6,6 @@ import { TypeOrmModule } from '@nestjs/typeorm'
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
 import * as ormOptions from './config/database.config'
-import { DatabaseConfig } from './database/config'
 import RepoModule from './repo.module'
 import MessageResolver from './resolvers/message.resolver'
 import UserResolver from './resolvers/user.resolver'
@@ -27,7 +26,8 @@ const graphQLImports = [
     ...graphQLImports,
     GraphQLModule.forRoot({
       autoSchemaFile: 'schema.gql',
-      playground: true
+      playground: true,
+      installSubscriptionHandlers: true
     })
   ],
   controllers: [AppController],

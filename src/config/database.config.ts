@@ -6,7 +6,7 @@ const options: TypeOrmModuleOptions = {
   type: 'postgres',
   host: 'localhost',
   port: 5432,
-  username: 'davispc10',
+  username: 'postgres',
   password: 'docker',
   database: 'showmessages',
 

@@ -49,3 +49,7 @@ input DeleteMessageInput {
 input UserInput {
   email: String!
 }
+
+type Subscription {
+  messageAdded: Message!
+}
